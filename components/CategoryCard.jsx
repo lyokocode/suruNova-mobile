@@ -1,7 +1,7 @@
 import { Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 
-const CategoryCard = ({ category }) => {
+export const CategoryCard = ({ category }) => {
 
     return (
         <TouchableOpacity
@@ -11,11 +11,10 @@ const CategoryCard = ({ category }) => {
                 source={{
                     uri: category.image
                 }}
-                className="w-32 h-32 rounded"
+                className="w-20 h-20 rounded"
             />
             <Text className="absolute bottom-1 left-1 text-white font-bold">{category.name}</Text>
         </TouchableOpacity>
     )
 }
-export default CategoryCard
 

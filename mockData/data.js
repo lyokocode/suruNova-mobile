@@ -24,5 +24,56 @@ export const categoryData = [
         name: "kaba yem",
         image: "https://i.pinimg.com/564x/4b/e4/ee/4be4eedbc9bce50765895ebbcdf5e85a.jpg",
     },
+]
 
+export const productData = [
+    {
+        id: 1,
+        title: "4 aylık dişi simental buzağı",
+        image: "https://i.pinimg.com/564x/90/86/1e/90861e3a414cfb6d20c4375750b244c1.jpg",
+        description: "5 adet 4 aylık ikisi dişi üçü erkek simental buzağım acil satılıktır. ",
+        categoryName: "Hayvancılık",
+        location: "çivril, denizli",
+        quantity: 5,
+        unitPrice: 40000,
+        views: "2000",
+        user: {
+            name: "Mustafa",
+            phoneNumber: "+905532768090",
+            rating: 4.3
+        }
+    },
+    {
+        id: 2,
+        title: "Yonca balyası",
+        image: "https://i.pinimg.com/564x/b3/4c/44/b34c4446ee7d0427b65d9a1e8a36ece5.jpg",
+        description: "500 adet 2.biçim otsuz yonca balyası. Pazarlık payı vardır. Adrese gönderim yapılır  ",
+        categoryName: "Kaba Yem",
+        location: "Banaz, Uşak",
+        quantity: 500,
+        unitPrice: 5,
+        views: "2000",
+        user: {
+            name: "Ömer",
+            phoneNumber: "+905355694919",
+            rating: 4.1
+        }
+    },
+    {
+        id: 3,
+        title: "Tümosan 8095 ",
+        image: "https://i.pinimg.com/564x/6a/72/e9/6a72e9aae8cddee44dc41d42602a1f9e.jpg",
+        description: "2005 Model, yeni rektefe edilmiş, lastikler yeni. Pazarlık payı yoktur. Ciddi alıcılar yazsın ",
+        categoryName: "Tarım Aletleri",
+        location: "Kale, Denizli",
+        quantity: 1,
+        unitPrice: 500000,
+        views: "2000",
+        user: {
+            name: "Ahmet",
+            phoneNumber: "+905355694919",
+            rating: 3.1
+        }
+
+    },
 ]
