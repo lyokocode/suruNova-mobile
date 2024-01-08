@@ -12,7 +12,7 @@ export const categoryData = [
     {
         id: 3,
         name: "Tarım aletleri",
-        image: "https://i.pinimg.com/564x/24/82/bb/2482bb3017e2ef9ae2d8d066f9c6e02a.jpg",
+        image: "https://i.pinimg.com/564x/be/33/cc/be33cc202f9b324eaae9b2efed691bc2.jpg",
     },
     {
         id: 4,
