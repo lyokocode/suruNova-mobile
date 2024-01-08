@@ -8,7 +8,9 @@ export const NearbyCards = ({ product }) => {
     return (
         <TouchableOpacity
             onPress={() => {
-                navigation.navigate("Product")
+                navigation.navigate("Product", {
+                    product
+                })
             }}
             className=" mr-2 bg-white shadow "
         >
