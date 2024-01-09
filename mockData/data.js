@@ -41,9 +41,10 @@ export const productData = [
         unitPrice: 40000,
         views: "2000",
         user: {
-            name: "Mustafa",
+            name: "Mustafa uşaklı",
             phoneNumber: "+905532768090",
-            rating: 4.3
+            rating: 4.3,
+            avatar: "https://pbs.twimg.com/profile_images/1740476733659254785/S3chCct-_400x400.jpg",
         }
     },
     {

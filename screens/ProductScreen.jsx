@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { ArrowLeftIcon, CalendarIcon, CheckCircleIcon, EyeIcon, HeartIcon, MapPinIcon } from 'react-native-heroicons/outline'
+import { ArrowLeftIcon, CalendarIcon, ChatBubbleOvalLeftEllipsisIcon, CheckCircleIcon, EyeIcon, HeartIcon, MapPinIcon, PhoneIcon, StarIcon } from 'react-native-heroicons/outline'
 import MapView from 'react-native-maps';
 
 export const ProductScreen = () => {
@@ -68,7 +68,7 @@ export const ProductScreen = () => {
 
                         <View className="flex-row items-center space-x-2 my-1">
                             <MapPinIcon size={22} color="gray" />
-                            <Text className="text-xs text-gray-500">
+                            <Text className="text-xs text-gray-500 capitalize">
                                 {product.location}
                             </Text>
                         </View>
@@ -92,12 +92,41 @@ export const ProductScreen = () => {
                         </View>
                     </View>
 
-                    {/* MAP container */}
-                    <View className="flex-1 bg-red-400">
-                        <Text>test deneme</Text>
-                        <MapView
-                            className="w-full h-screen"
 
+                    {/* user info */}
+                    <View className="my-4 pt-3 ">
+                        <View className="flex-row space-x-4">
+                            <Image
+                                source={{
+                                    uri: product?.user?.avatar
+                                }}
+                                className="w-24 h-24 bg-gray-300 p-4 rounded-full"
+                            />
+                            <View className="flex gap-y-4  flex-1">
+                                <Text className="font-bold capitalize text-lg">{product.user.name}</Text>
+                                <View className="flex-row items-center">
+                                    <StarIcon size={24} color="gray" />
+                                    <Text>{product.user.rating}</Text>
+                                </View>
+                                <View className="flex-row space-x-2">
+                                    <TouchableOpacity className=" bg-green-500 px-4 py-3 rounded flex-row    gap-x-2 items-center justify-center ">
+                                        <Text>Satıcıyı Ara</Text>
+                                        <PhoneIcon size={24} color="gray" />
+                                    </TouchableOpacity>
+                                    <TouchableOpacity className=" bg-red-400 px-4 py-3 rounded flex-row    gap-x-2 items-center justify-center ">
+                                        <Text>Mesaj Gönder</Text>
+                                        <ChatBubbleOvalLeftEllipsisIcon size={24} color="gray" />
+                                    </TouchableOpacity>
+                                </View>
+                            </View>
+                        </View>
+                    </View>
+
+                    {/* MAP container */}
+                    <View className="bg-red-400 ">
+                        <Text>Map here</Text>
+                        <MapView
+                            className="w-full h-56"
                         />
                     </View>
                 </View>
