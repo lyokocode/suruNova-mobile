@@ -30,7 +30,11 @@ export const HomeScreen = () => {
                     </View>
                 </View>
 
-                <UserIcon size={35} color="#00ccbb" />
+                <UserIcon size={35} color="#00ccbb"
+                    onPress={() => {
+                        navigation.navigate("Profile")
+                    }}
+                />
             </ View >
 
             {/* search */}
@@ -65,7 +69,7 @@ export const HomeScreen = () => {
                 />
 
                 <FeaturedRow
-                    title="En çok bakılan ilanlar!"
+                    title="En çok görüntülenen ilanlar!"
                     description="Kullanıcıların en çok görüntülediği ilanlar. "
                     featuredCategory="featured"
                 />

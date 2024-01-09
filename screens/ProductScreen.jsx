@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity } from 'react-native'
+import { View, Text, SafeAreaView, Linking, ScrollView, Image, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { ArrowLeftIcon, CalendarIcon, ChatBubbleOvalLeftEllipsisIcon, CheckCircleIcon, EyeIcon, HeartIcon, MapPinIcon, PhoneIcon, StarIcon } from 'react-native-heroicons/outline'
@@ -16,11 +16,15 @@ export const ProductScreen = () => {
         })
     }, [])
 
+    const handlePhonePress = () => {
+        const phoneNumber = '+1234567890';
 
+        Linking.openURL(`tel:${phoneNumber}`);
+    };
 
 
     return (
-        <ScrollView>
+        <ScrollView className="bg-white">
             <View className="relative ">
                 <Image
                     source={{
@@ -51,6 +55,8 @@ export const ProductScreen = () => {
 
                 )}
             </TouchableOpacity>
+
+            {/* product detail */}
             <View className="bg-white">
                 <View className="px-4 pt-4">
                     <Text className="text-2xl font-bold">{product.title}</Text>
@@ -91,45 +97,47 @@ export const ProductScreen = () => {
                             <Text className="text-gray-600 text-sm">{product.unitPrice}₺ / {product.quantityUnit}</Text>
                         </View>
                     </View>
-
-
-                    {/* user info */}
-                    <View className="my-4 pt-3 ">
-                        <View className="flex-row space-x-4">
-                            <Image
-                                source={{
-                                    uri: product?.user?.avatar
-                                }}
-                                className="w-24 h-24 bg-gray-300 p-4 rounded-full"
-                            />
-                            <View className="flex gap-y-4  flex-1">
-                                <Text className="font-bold capitalize text-lg">{product.user.name}</Text>
-                                <View className="flex-row items-center">
-                                    <StarIcon size={24} color="gray" />
-                                    <Text>{product.user.rating}</Text>
-                                </View>
-                                <View className="flex-row space-x-2">
-                                    <TouchableOpacity className=" bg-green-500 px-4 py-3 rounded flex-row    gap-x-2 items-center justify-center ">
-                                        <Text>Satıcıyı Ara</Text>
-                                        <PhoneIcon size={24} color="gray" />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity className=" bg-red-400 px-4 py-3 rounded flex-row    gap-x-2 items-center justify-center ">
-                                        <Text>Mesaj Gönder</Text>
-                                        <ChatBubbleOvalLeftEllipsisIcon size={24} color="gray" />
-                                    </TouchableOpacity>
-                                </View>
-                            </View>
+                </View>
+            </View>
+            {/* user info */}
+            <View className="my-4 pt-3 flex space-y-4 bg-gray-50">
+                <View className="flex-row space-x-4">
+                    <Image
+                        source={{
+                            uri: product?.user?.avatar
+                        }}
+                        className="w-24 h-24 bg-gray-300 p-4 rounded-full"
+                    />
+                    <View className="flex gap-y-4  flex-1">
+                        <Text className="font-bold capitalize text-lg">{product.user.name}</Text>
+                        <View className="flex-row items-center">
+                            <StarIcon size={24} color="gray" />
+                            <Text>{product.user.rating}</Text>
                         </View>
                     </View>
-
-                    {/* MAP container */}
-                    <View className="bg-red-400 ">
-                        <Text>Map here</Text>
-                        <MapView
-                            className="w-full h-56"
-                        />
-                    </View>
                 </View>
+                {/* linkink */}
+                <View className="flex-row items-center justify-center space-x-2 ">
+                    <TouchableOpacity
+                        className=" bg-green-500 px-4 py-3 rounded flex-row    gap-x-2 items-center justify-center "
+                        onPress={handlePhonePress}
+                    >
+                        <Text>Satıcıyı Ara</Text>
+                        <PhoneIcon size={24} color="gray" />
+                    </TouchableOpacity>
+                    <TouchableOpacity className=" bg-red-400 px-4 py-3 rounded flex-row    gap-x-2 items-center justify-center ">
+                        <Text>Mesaj Gönder</Text>
+                        <ChatBubbleOvalLeftEllipsisIcon size={24} color="gray" />
+                    </TouchableOpacity>
+                </View>
+            </View>
+
+            {/* MAP container */}
+            <View >
+                <Text>Map here</Text>
+                <MapView
+                    className="w-full h-56"
+                />
             </View>
         </ScrollView>
     )
