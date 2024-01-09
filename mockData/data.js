@@ -35,6 +35,9 @@ export const productData = [
         categoryName: "Hayvancılık",
         location: "çivril, denizli",
         quantity: 5,
+        date: "09.01.2024",
+        unitValue: "adet",
+        quantityUnit: "adet",
         unitPrice: 40000,
         views: "2000",
         user: {
@@ -52,6 +55,9 @@ export const productData = [
         location: "Banaz, Uşak",
         quantity: 500,
         unitPrice: 5,
+        date: "01.01.2024",
+        unitValue: "adet",
+        quantityUnit: "kg",
         views: "2000",
         user: {
             name: "Ömer",
@@ -76,4 +82,17 @@ export const productData = [
         }
 
     },
+]
+
+export const userData = [
+    {
+        id: 1,
+        name: "Mustafa Uşaklı",
+        email: "mustafausakli_@hotmail.com",
+        phoneNumber: "+905532768090",
+        role: "admin",
+        avatar: "https://pbs.twimg.com/profile_images/1740476733659254785/S3chCct-_400x400.jpg",
+        rating: "4.8",
+        location: "çivril,Denizli"
+    }
 ]
