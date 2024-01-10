@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ExploreScreen, FavoritesScreen, HomeScreen, MessageScreen, ProductScreen, ProfileScreen, SellScreen } from './screens';
+import { ExploreScreen, FavoritesScreen, HomeScreen, MessageScreen, ProductScreen, ProfileScreen, SellScreen, NearbyScreen } from './screens';
 import { CameraIcon, ChatBubbleOvalLeftEllipsisIcon, GlobeAltIcon, HeartIcon, HomeIcon } from 'react-native-heroicons/outline';
 
 const Stack = createNativeStackNavigator()
@@ -8,10 +8,15 @@ const Tab = createBottomTabNavigator();
 
 const HomeStack = () => {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator
+            screenOptions={{
+                headerShown: false
+            }}
+        >
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Product" component={ProductScreen} />
             <Stack.Screen name="Profile" component={ProfileScreen} />
+            <Stack.Screen name="Nearby" component={NearbyScreen} />
         </Stack.Navigator>
     );
 }

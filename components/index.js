@@ -1,3 +1,4 @@
+export { Header } from "./Header"
 export { Categories } from "./Categories"
 export { CategoryCard } from "./CategoryCard"
 export { FeaturedRow } from "./FeaturedRow"
