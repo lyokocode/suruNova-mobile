@@ -3,6 +3,7 @@ import { Categories, FeaturedRow, Header } from '../components'
 
 export const HomeScreen = () => {
 
+
     return (
         <View className="bg-white pt-5 flex-1">
             <Header />

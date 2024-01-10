@@ -63,7 +63,9 @@ export const productData = [
         user: {
             name: "Ömer",
             phoneNumber: "+905355694919",
-            rating: 4.1
+            rating: 4.1,
+            avatar: "https://pbs.twimg.com/profile_images/1740476733659254785/S3chCct-_400x400.jpg",
+
         }
     },
     {
@@ -83,6 +85,27 @@ export const productData = [
         }
 
     },
+    {
+        id: 4,
+        title: "Kırmızı Buğday",
+        image: "https://i.pinimg.com/564x/fc/2d/2e/fc2d2ea3a53af3b7731a67526186a9cc.jpg",
+        description: "elimde 40 ton kırmızı buğday vardır. bitlenme, çürüme yoktur. alana şimdiden hayyırlı olsun  ",
+        categoryName: "Tarım ürünleri",
+        location: "selçuk, Konya",
+        quantity: 40,
+        unitPrice: 8.5,
+        date: "07.10.2023",
+        unitValue: "ton",
+        quantityUnit: "kg",
+        views: "500",
+        user: {
+            name: "Ömer",
+            phoneNumber: "+905355694919",
+            rating: 4.1,
+            avatar: "https://pbs.twimg.com/profile_images/1740476733659254785/S3chCct-_400x400.jpg",
+        }
+    },
+
 ]
 
 export const userData = [
