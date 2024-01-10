@@ -14,7 +14,7 @@ export const HomeScreen = () => {
     }, [])
 
     return (
-        <SafeAreaView className="bg-white pt-5 flex-1">
+        <View className="bg-white pt-5 flex-1">
             {/* header */}
             < View className="mt-8 flex-row items-center pb-3 mx-4 space-x-2" >
                 <Image
@@ -80,7 +80,7 @@ export const HomeScreen = () => {
                 />
             </ScrollView>
 
-        </SafeAreaView>
+        </View>
 
     )
 }
