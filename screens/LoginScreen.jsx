@@ -1,8 +1,12 @@
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
-
-import React from 'react'
+import { useDispatch, useSelector } from "react-redux";
+import { setAuth } from '../store/AuthSlice';
 
 export const LoginScreen = () => {
+    const dispatch = useDispatch()
+
+    const { auth } = useSelector(state => state.auth)
+
     return (
         // wrapper
         <View className="flex-1 relative">
@@ -34,7 +38,10 @@ export const LoginScreen = () => {
 
                 {/* button container */}
 
-                <TouchableOpacity className="bg-[#7c3aed] w-1/2  py-3 rounded-xl">
+                <TouchableOpacity
+                    onPress={() => dispatch(setAuth())}
+                    className="bg-[#7c3aed] w-1/2  py-3 rounded-xl"
+                >
                     <Text className="text-center text-lg text-white font-semibold">Giriş Yap</Text>
                 </TouchableOpacity>
 
