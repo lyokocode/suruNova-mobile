@@ -6,9 +6,7 @@ import { useDispatch } from "react-redux";
 import { setAuth } from '../store/AuthSlice';
 
 export const ProfileScreen = () => {
-
     const navigation = useNavigation()
-
     const dispatch = useDispatch()
 
     return (
