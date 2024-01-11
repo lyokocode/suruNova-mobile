@@ -1,11 +1,10 @@
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setAuth } from '../store/AuthSlice';
 
 export const LoginScreen = () => {
     const dispatch = useDispatch()
 
-    const { auth } = useSelector(state => state.auth)
 
     return (
         // wrapper

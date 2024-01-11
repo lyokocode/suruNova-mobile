@@ -1,17 +1,15 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
-import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { ArrowLeftIcon, CalendarIcon, InformationCircleIcon, ShareIcon, TagIcon } from 'react-native-heroicons/outline'
+import { useDispatch } from "react-redux";
+import { setAuth } from '../store/AuthSlice';
 
 export const ProfileScreen = () => {
 
     const navigation = useNavigation()
-    useLayoutEffect(() => {
-        navigation.setOptions({
-            headerShown: false
-        })
-    }, [])
+
+    const dispatch = useDispatch()
 
     return (
         <SafeAreaView >
@@ -52,6 +50,11 @@ export const ProfileScreen = () => {
             </View>
             <TouchableOpacity className="bg-red-500  rounded-2xl w-2/3 mt-4 mx-auto flex items-center justify-center">
                 <Text className="px-4 py-3 text-white font-bold text-lg">Profili düzenle</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => dispatch(setAuth())}
+                className="bg-red-500  rounded-2xl w-2/3 mt-4 mx-auto flex items-center justify-center">
+                <Text className="px-4 py-3 text-white font-bold text-lg">Çıkış Yap</Text>
             </TouchableOpacity>
         </SafeAreaView>
     )
