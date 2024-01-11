@@ -5,13 +5,13 @@ import { productData } from '../mockData/data'
 export const ExploreScreen = () => {
 
     return (
-        <View className="bg-white">
+        <View className="bg-white ">
             <Header />
-            <ScrollView className="w-screen min-h-screen flex-row flex-wrap gap-x-2 gap-y-4">
-                <View className="w-screen min-h-screen flex-row flex-wrap gap-x-2 gap-y-4">
+            <ScrollView className="w-screen min-h-[55vh]">
+                <View className="w-screen min-h-[55vh] flex-row flex-wrap  item-center justify-between gap-y-4  ">
                     {
                         productData && productData.map(product => (
-                            <View className="w-[48%]">
+                            <View className="w-[48%] ">
                                 <ProductCart product={product} />
                             </View>
                         ))

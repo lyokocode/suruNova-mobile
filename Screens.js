@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ExploreScreen, FavoritesScreen, HomeScreen, MessageScreen, ProductScreen, ProfileScreen, SellScreen, NearbyScreen } from './screens';
+import { ExploreScreen, FavoritesScreen, HomeScreen, MessageScreen, ProductScreen, ProfileScreen, SellScreen, NearbyScreen, RegisterScreen } from './screens';
 import { CameraIcon, ChatBubbleOvalLeftEllipsisIcon, GlobeAltIcon, HeartIcon, HomeIcon } from 'react-native-heroicons/outline';
 import { LoginScreen } from './screens/LoginScreen';
 import { useSelector } from 'react-redux';
@@ -101,6 +101,7 @@ const Screens = () => {
                     }}
                 >
                     <Stack.Screen name="Login" component={LoginScreen} />
+                    <Stack.Screen name="Register" component={RegisterScreen} />
                 </Stack.Navigator>
             )}
         </>

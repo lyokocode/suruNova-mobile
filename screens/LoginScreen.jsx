@@ -1,10 +1,11 @@
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { useDispatch } from "react-redux";
 import { setAuth } from '../store/AuthSlice';
+import { useNavigation } from '@react-navigation/native';
 
 export const LoginScreen = () => {
     const dispatch = useDispatch()
-
+    const navigation = useNavigation()
 
     return (
         // wrapper
@@ -47,7 +48,9 @@ export const LoginScreen = () => {
                 {/* link */}
                 <View className="flex-row gap-x-2 items-center">
                     <Text className="text-center text-base text-white font-light">henüz hesabın yok mu?</Text>
-                    <TouchableOpacity >
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate("Register")}
+                    >
                         <Text className="font-medium text-white text-lg  underline">kayıt ol</Text>
                     </TouchableOpacity>
                 </View>

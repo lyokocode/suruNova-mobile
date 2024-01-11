@@ -3,7 +3,7 @@ import React from 'react'
 
 export const MessageScreen = () => {
     return (
-        <View>
+        <View className="flex-1 items-center justify-center ">
             <Text>MessageScreen</Text>
         </View>
     )
