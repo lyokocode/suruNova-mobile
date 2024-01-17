@@ -1,11 +1,13 @@
 import { View, Text, ScrollView } from 'react-native'
-import React from 'react'
 import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import { productData } from '../mockData/data'
-import { NearbyCards } from './'
+import { NearbyCards } from './NearbyCards'
 import { useNavigation } from '@react-navigation/native'
 
 export const FeaturedRow = ({ title, description, featuredCategory }) => {
+
+
+
     const navigation = useNavigation()
 
     return (

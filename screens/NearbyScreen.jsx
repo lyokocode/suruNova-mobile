@@ -9,7 +9,7 @@ export const NearbyScreen = () => {
         <View className="bg-white">
             <Header />
             <ScrollView className="w-screen min-h-[55vh]">
-                <View className="w-screen min-h-[55vh] flex-row flex-wrap  item-center justify-between gap-y-4  ">
+                <View className="w-screen min-h-[55vh] flex-row flex-wrap  item-center justify-between gap-y-4 ">
                     {productData && productData.map(product => (
 
                         <View className="w-[48%] ">
